@@ -1,26 +1,38 @@
-<script setup lang="ts">
-import Home from "./components/Home.vue";
-import Navbar from "./components/Navbar.vue";
-</script>
-
 <template>
-  <div>
-    <Navbar />
-    <Home />
+  <div id="app">
+    <nav>
+      <router-link to="/">Home</router-link>
+      <router-link to="/about">About</router-link>
+      <router-link to="/projects">Projects</router-link>
+      <router-link to="/contact">Contact</router-link>
+    </nav>
+    <router-view />
   </div>
 </template>
 
-<style scoped>
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+<script lang="ts">
+import { defineComponent } from "vue";
+
+export default defineComponent({
+  name: "App",
+});
+</script>
+
+<style>
+nav {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+  background-color: #333;
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 10px;
 }
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
+
+nav a.router-link-exact-active {
+  font-weight: bold;
 }
 </style>

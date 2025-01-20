@@ -1,7 +1,7 @@
 <template>
-  <div class="home">
-    <h1>Welcome to My Portfolio</h1>
-    <p>Your introduction goes here.</p>
+  <div class="about">
+    <h2>About Me</h2>
+    <p>Details about yourself.</p>
   </div>
 </template>
 
@@ -9,12 +9,12 @@
 import { defineComponent } from "vue";
 
 export default defineComponent({
-  name: "Home",
+  name: "About",
 });
 </script>
 
 <style scoped>
-.home {
-  text-align: center;
+.about {
+  padding: 20px;
 }
 </style>
