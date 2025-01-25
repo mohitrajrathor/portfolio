@@ -1,38 +1,26 @@
 <template>
   <div id="app">
-    <nav>
-      <router-link to="/">Home</router-link>
-      <router-link to="/about">About</router-link>
-      <router-link to="/projects">Projects</router-link>
-      <router-link to="/contact">Contact</router-link>
-    </nav>
+    <!-- navbar -->
+    <Navbar />
+
     <router-view />
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from "vue";
+import Navbar from "./components/Navbar.vue";
 
 export default defineComponent({
   name: "App",
+  components: {
+    Navbar,
+  },
 });
 </script>
 
 <style>
-nav {
-  display: flex;
-  justify-content: space-around;
-  padding: 10px;
-  background-color: #333;
-}
-
-nav a {
-  color: white;
-  text-decoration: none;
-  padding: 10px;
-}
-
-nav a.router-link-exact-active {
-  font-weight: bold;
+#app {
+  background-color: #e5e4e5;
 }
 </style>

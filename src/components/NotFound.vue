@@ -1,8 +1,10 @@
 <template>
-  <div class="not-found">
-    <h1>404 - Page Not Found</h1>
-    <p>The page you are looking for does not exist.</p>
-    <router-link to="/">Go back to Home</router-link>
+  <div class="h-screen flex justify-center">
+    <div class="text-center my-auto">
+      <h1 class="text-5xl">404 - Page Not Found</h1>
+      <p>The page you are looking for does not exist.</p>
+      <router-link to="/portfolio/">Go back to Home</router-link>
+    </div>
   </div>
 </template>
 
@@ -14,9 +16,4 @@ export default defineComponent({
 });
 </script>
 
-<style scoped>
-.not-found {
-  text-align: center;
-  margin-top: 50px;
-}
-</style>
+<style scoped></style>

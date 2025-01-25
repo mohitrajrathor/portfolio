@@ -7,11 +7,11 @@ import Contact from "../components/Contact.vue";
 import NotFound from "../components/NotFound.vue";
 
 const routes: Array<RouteRecordRaw> = [
-  { path: "/", component: Home },
-  { path: "/about", component: About },
-  { path: "/projects", component: Projects },
-  { path: "/contact", component: Contact },
-  { path: "/:pathMatch(.*)*", component: NotFound }, // Catch-all route
+  { path: "/portfolio/", component: Home },
+  { path: "/portfolio/about", component: About },
+  { path: "/portfolio/projects", component: Projects },
+  { path: "/portfolio/contact", component: Contact },
+  { path: "/portfolio/:pathMatch(.*)*", component: NotFound }, // Catch-all route
 ];
 
 const router = createRouter({
